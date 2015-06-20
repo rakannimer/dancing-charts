@@ -1,0 +1,29 @@
+{
+  "name": "react-dancing-spreadsheets",
+  "version": "0.0.0",
+  "description": "dancing-spreadsheets",
+  "main": "dist/react-dancing-spreadsheets.min.js",
+  "homepage": "https://github.com/RakanNimer/react-dancing-spreadsheets",
+  "authors": [
+    "Rakan Nimer"
+  ],
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "react",
+    "react-component"
+  ],
+  "license": "MIT",
+  "ignore": [
+    ".editorconfig",
+    ".gitignore",
+    "package.json",
+    "src",
+    "node_modules",
+    "example",
+    "test"
+  ]
+}

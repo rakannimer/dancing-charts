@@ -1,0 +1,49 @@
+{
+  "name": "react-dancing-spreadsheets",
+  "version": "0.0.0",
+  "description": "dancing-spreadsheets",
+  "main": "lib/DancingSpreadsheets.js",
+  "author": "Rakan Nimer",
+  "homepage": "https://github.com/RakanNimer/dancing-spreadsheets",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RakanNimer/dancing-spreadsheets.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RakanNimer/dancing-spreadsheets/issues"
+  },
+  "dependencies": {
+    "classnames": "^2.1.2",
+    "jquery": "^2.1.4",
+    "q": "^1.4.1",
+    "react": "^0.13.3",
+    "react-bootstrap": "^0.23.4",
+    "react-google-charts": "^0.1.4",
+    "sheetsee": "0.0.2",
+    "tabletop": "git://github.com/jsoma/tabletop.git"
+  },
+  "devDependencies": {
+    "babel-eslint": "^3.1.14",
+    "eslint": "^0.22.1",
+    "eslint-plugin-react": "^2.5.0",
+    "react-component-gulp-tasks": "^0.7.0",
+    "gulp": "^3.9.0"
+  },
+  "browserify-shim": {
+    "react": "global:React"
+  },
+  "scripts": {
+    "build": "gulp clean && NODE_ENV=production gulp build",
+    "examples": "gulp dev:server",
+    "lint": "eslint ./; true",
+    "publish:site": "gulp publish:examples",
+    "release": "gulp release",
+    "start": "gulp dev",
+    "test": "echo \"no tests yet\" && exit 0",
+    "watch": "gulp watch:lib"
+  },
+  "keywords": [
+    "react",
+    "react-component"
+  ]
+}

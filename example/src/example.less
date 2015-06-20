@@ -1,0 +1,165 @@
+/* 
+// Examples Stylesheet
+// -------------------
+*/
+
+@bg : #607D8B;
+@header_color : white;
+@label_color: #CFD8DC;
+
+body {
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	color: #333;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: #CFD8DC;
+	text-decoration: underline;
+}
+
+.btn-default {
+	margin-top:10px;
+	margin-right:10px;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 720px;
+	padding: 1em;
+}
+
+.footer {
+	margin-top: 50px;
+	border-top: 1px solid #eee;
+	padding: 20px 0;
+	font-size: 12px;
+	color: #999;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: @header_color;
+	font-weight: 100;
+	margin: 0.5em 0;
+	text-align: center;
+  	font-size: 35px;
+}
+
+label {
+	color: @label_color;
+	display: inline-block;
+	font-size: 0.85em;
+	font-weight: bold;
+	margin: 1em 0;
+	text-transform: uppercase;
+}
+
+.hint {
+	margin: 15px 0;
+	font-style: italic;
+	color: #999;
+}
+.hide {
+	display:none;
+}
+
+.buttonContainer {
+	border: solid 2px #B6B6B6;
+  	border-left: 0px;
+  	padding-bottom: 23px;
+  	margin-top:15px;
+}
+
+
+.spreadsheet-loading {
+	font-size: 20px;
+  	margin-top: 257px;
+  	padding-left: 21px;
+  	color: #cfd8dc;
+}
+
+
+
+/*
+Loader From : http://codepen.io/dicson/pen/vOxZjM	
+*/
+
+.boxLoading {  
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  &:before {
+    content: '';
+    width: 50px;
+    height: 5px;
+    background: #000;
+    opacity: 0.1;
+    position: absolute;
+    top: 59px;
+    left: 0;
+    border-radius: 50%;
+    animation: shadow .5s linear infinite;
+  }
+  &:after {
+    content: '';
+    width: 50px;
+    height: 50px;
+    background: #1a3668;
+    animation: animate .5s linear infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 3px;
+  }
+}
+
+@keyframes animate {
+  17% {
+    border-bottom-right-radius: 3px;
+  }
+  25% {
+    transform: translateY(9px) rotate(22.5deg);
+  }
+  50% {
+    transform: translateY(18px) scale(1, .9) rotate(45deg);
+    border-bottom-right-radius: 40px;
+  }
+  75% {
+    transform: translateY(9px) rotate(67.5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(90deg);
+  }
+}
+
+
+@keyframes shadow {
+  0%, 100% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.2, 1);
+  }
+}
+
+
+body, html {
+  background: @bg;
+  overflow: hidden;
+  height: 100%;
+}
+
+
+
