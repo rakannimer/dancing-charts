@@ -4,7 +4,7 @@ Reads google spreadsheets and converts them to animated charts.
 
 ## Demo & Examples
 
-Live demo: [RakanNimer.github.io/react-dancing-spreadsheets](http://RakanNimer.github.io/react-dancing-spreadsheets/)
+Live demo: [RakanNimer.github.io/dancing-spreadsheets](http://RakanNimer.github.io/react-dancing-spreadsheets/)
 
 To build the examples locally, run:
 
