@@ -82,7 +82,7 @@ var DancingSpreadsheets= React.createClass({
 				data: data
 			});
 			self.current_row++;
-			if (self.current_row === self.spreadsheet.data_sheet.rows.length) {
+			if (self.current_row === self.spreadsheet.data_sheet.rows.length -1) {
 				window.clearInterval(self.interval_id)
 			}
 		}, self.state.delta_t)
@@ -154,7 +154,6 @@ var DancingSpreadsheets= React.createClass({
 				this.spreadsheet.data_sheet.rows[i][j] = this.spreadsheet.data_sheet.original_rows[i][j] * height_multiplier;
 				
 			}
-			//this.simulation_data.data[i] = this.simulation_data.data[i] * height_multiplier;
 		}
 
 		data[1] = this.spreadsheet.data_sheet.rows[this.current_row-1];
