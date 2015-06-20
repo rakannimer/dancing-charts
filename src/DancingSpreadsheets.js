@@ -22,12 +22,10 @@ var DancingSpreadsheets= React.createClass({
 			//cols: [],
 			spreadsheet_url: 'https://docs.google.com/spreadsheets/d/1flW5Ngyoqepe_W1FkqO6PGWQYRRU00lA3onCQBU51aY/pubhtml',
 			spreadsheet_loaded: false,
-			rows: [],
-			columns: [],
 			data:[],
 			loaded: false,
 			options: ChartOptions,
-			delta_t: 400,
+			delta_t: 200,
 			height_multiplier: 1
 		}
 	},
