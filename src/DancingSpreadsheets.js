@@ -38,6 +38,7 @@ var DancingSpreadsheets= React.createClass({
 				spreadsheet_loaded: true,
 				loaded: true
 			});
+			self.start_animation();
 		});
 	},
 
