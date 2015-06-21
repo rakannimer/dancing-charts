@@ -4,7 +4,6 @@ var SpreadSheet = require('./SpreadSheet');
 var ChartOptions = require('./ChartOptions');
 var Button = require('react-bootstrap').Button;
 var Input = require('react-bootstrap').Input;
-var Modal = require('react-bootstrap').Modal;
 var $ = require('jquery');
 var q = require('q');
 var classnames = require('classnames');
