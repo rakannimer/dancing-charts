@@ -1,10 +1,10 @@
-# Dancing Spreadsheets
+# Dancing Charts
 
-Reads Google spreadsheets and converts them to animated charts with React.
+Animated Google Charts with React.
 
 ## Usage
 
-The Component reads from a Google Spreadsheet. An example one is provided, but you can change it from the user interface.
+The Component reads the state of the chart from a Google Spreadsheet. An example one is provided, but you can change it from the user interface.
 
 The SpreadSheet should have 2 sheets :
 
@@ -21,7 +21,7 @@ The SpreadSheet should have 2 sheets :
 
 ## Demo & Examples
 
-Live demo: [RakanNimer.github.io/dancing-spreadsheets](http://RakanNimer.github.io/dancing-spreadsheets/)
+Live demo: [RakanNimer.github.io/dancing-charts](http://RakanNimer.github.io/dancing-charts/)
 
 To build the examples locally, run:
 
