@@ -41,4 +41,8 @@ npm install
 ```
 To build, watch and serve the examples (which will also watch the component source), run `npm start`. If you just want to watch changes to `src` and rebuild `lib`, run `npm run watch` (this is useful if you are working with `npm link`).
 
+## Credits
+
+[tabletop](https://github.com/jsoma/tabletop) to grab the Chart data from Google Spreadsheets.
+
 
