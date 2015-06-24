@@ -73,6 +73,9 @@ label {
   padding-left: 21px;
   color: #cfd8dc;
 }
+.description {
+  font-size: 17px;
+}
 /*
 Loader From : http://codepen.io/dicson/pen/vOxZjM	
 */
