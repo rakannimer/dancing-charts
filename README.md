@@ -2,19 +2,6 @@
 
 Reads Google spreadsheets and converts them to animated charts with React.
 
-## Demo & Examples
-
-Live demo: [RakanNimer.github.io/dancing-spreadsheets](http://RakanNimer.github.io/dancing-spreadsheets/)
-
-To build the examples locally, run:
-
-```
-npm install
-npm start
-```
-
-Then open [`localhost:8000`](http://localhost:8000) in a browser.
-
 ## Usage
 
 The Component reads from a Google Spreadsheet. An example one is provided, but you can change it from the user interface.
@@ -28,7 +15,22 @@ The SpreadSheet should have 2 sheets :
 
 	2- Options
 		The first row should contain the columns in String format
-		The seconds the colors 
+		The second the color of each.
+
+
+
+## Demo & Examples
+
+Live demo: [RakanNimer.github.io/dancing-spreadsheets](http://RakanNimer.github.io/dancing-spreadsheets/)
+
+To build the examples locally, run:
+
+```
+npm install
+npm start
+```
+
+Then open [`localhost:8000`](http://localhost:8000) in a browser.
 
 
 ## Development
