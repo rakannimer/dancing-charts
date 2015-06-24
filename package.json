@@ -19,7 +19,6 @@
     "react": "^0.13.3",
     "react-bootstrap": "^0.23.4",
     "react-google-charts": "^0.1.4",
-    "sheetsee": "0.0.2",
     "tabletop": "git://github.com/jsoma/tabletop.git"
   },
   "devDependencies": {
@@ -44,6 +43,7 @@
   },
   "keywords": [
     "react",
-    "react-component"
+    "charts",
+    "animation"
   ]
 }
