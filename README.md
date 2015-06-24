@@ -4,7 +4,7 @@ Reads Google spreadsheets and converts them to animated charts with React.
 
 ## Demo & Examples
 
-Live demo: [RakanNimer.github.io/dancing-spreadsheets](http://RakanNimer.github.io/react-dancing-spreadsheets/)
+Live demo: [RakanNimer.github.io/dancing-spreadsheets](http://RakanNimer.github.io/dancing-spreadsheets/)
 
 To build the examples locally, run:
 
@@ -34,11 +34,9 @@ The SpreadSheet should have 2 sheets :
 ## Development
 
 Fork the repo and clone it.
-```npm install
+```
+npm install
 ```
 To build, watch and serve the examples (which will also watch the component source), run `npm start`. If you just want to watch changes to `src` and rebuild `lib`, run `npm run watch` (this is useful if you are working with `npm link`).
 
-
-
-Copyright (c) 2015 Rakan Nimer.
 
