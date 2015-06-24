@@ -26,7 +26,7 @@ getInitialState: function() {
       	<div className = {"col-lg-10"} >
 		<div className= {loaderClass}>
 			<div >
-				<h4 className={"spreadsheet-loading"}><span>Loading Data From Google Spreadsheets ...</span> </h4>
+				<h4 className={"spreadsheet-loading"}><span>Loading data from Google spreadsheets ...</span> </h4>
 			</div>
 			<div className="boxLoading">
 			</div>
