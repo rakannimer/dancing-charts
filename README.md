@@ -32,7 +32,6 @@ npm start
 
 Then open [`localhost:8000`](http://localhost:8000) in a browser.
 
-
 ## Development
 
 Fork the repo and clone it.
@@ -44,5 +43,6 @@ To build, watch and serve the examples (which will also watch the component sour
 ## Credits
 
 [tabletop](https://github.com/jsoma/tabletop) to grab the Chart data from Google Spreadsheets.
-
+[Bouncing css Loader](http://codepen.io/dicson/pen/vOxZjM)
+[React Component Generator](https://github.com/JedWatson/generator-react-component)
 

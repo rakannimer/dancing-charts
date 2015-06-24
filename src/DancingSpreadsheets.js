@@ -18,7 +18,6 @@ var DancingSpreadsheets= React.createClass({
 	
 	getInitialState: function () {
 		return {
-			//cols: [],
 			spreadsheet_url: 'https://docs.google.com/spreadsheets/d/1flW5Ngyoqepe_W1FkqO6PGWQYRRU00lA3onCQBU51aY/pubhtml',
 			spreadsheet_loaded: false,
 			data:[],
@@ -37,7 +36,7 @@ var DancingSpreadsheets= React.createClass({
 				spreadsheet_loaded: true,
 				loaded: true
 			});
-			self.start_animation();
+			//self.start_animation();
 		});
 	},
 
@@ -45,6 +44,8 @@ var DancingSpreadsheets= React.createClass({
 		var self = this,
 			data_sheet = null,
 			options_sheet = null;
+
+		//The data can be fetched from anywhere
 		this.spreadsheet = new SpreadSheet(this.state.spreadsheet_url);
 		return this.spreadsheet.fetch().then( function(sheets) {
 
@@ -130,8 +131,13 @@ var DancingSpreadsheets= React.createClass({
 		window.clearInterval(this.interval_id);
 	},
 	reset_animation: function() {
+		var data =this.state.data;
 		window.clearInterval(this.interval_id);
 		this.current_row = 1;
+		data[1] = self.spreadsheet.data_sheet.rows[this.current_row];
+		self.setState({
+			data: data
+		});
 		//this.start_animation();
 	},
 	change_delta_t: function(e) {
@@ -164,54 +170,64 @@ var DancingSpreadsheets= React.createClass({
 	render: function () {
 		var loaderClass = classnames({'hide':this.state.loaded});
 		return (
-		<div className={"row"}>
-			<div className={" col-lg-2 buttonContainer"}>
-				<div className={""}>
-					<div>
-						<label htmlFor="delta_t">Delta T </label>
-						<input className="form-control"
-							type='text' 
-							   id='delta_t'
-							ref = 'delta_t'
-							defaultValue={this.state.delta_t}
-							placeholder='Height Multiplier'
-							label='Height Multiplier'
-							onChange = {this.change_delta_t}/>
-						<label htmlFor="height_multiplier">Height Multiplier </label>
-						<input className="form-control"
-							type='text'
-							ref = 'height_multipler'
-						   	id='height_multiplier'
-							defaultValue = {this.state.height_multiplier}
-							placeholder='Height Multiplier'
-							label='Height Multiplier'
-							onChange = {this.change_height_multiplier}/>
-					</div>
+		<div>
 
-					<div>
-						<Button onClick ={this.start_animation} > Start  </Button>
-						<Button onClick ={this.stop_animation} > Stop  </Button>
-						<Button onClick ={this.reset_animation} > Reset  </Button>
-						<div style ={{'marginTop':'10px'}}> 
-							<a href={this.state.spreadsheet_url} target="_blank"> 
-								Edit Spreadsheet Values 
-							</a> 
+			<div className={"row"}>
+				<div className={" col-lg-2 buttonContainer"}>
+					<div className={""}>
+						<div>
+							
+							<label htmlFor="delta_t">Interval Length (ms) </label>
+							<input className="form-control small"
+								type='text' 
+								   id='delta_t'
+								ref = 'delta_t'
+								defaultValue={this.state.delta_t}
+								placeholder='Height Multiplier'
+								label='Height Multiplier'
+								onChange = {this.change_delta_t}/>
+							<label htmlFor="height_multiplier">Height Multiplier </label>
+							<input className="form-control small"
+								type='text'
+								ref = 'height_multipler'
+							   	id='height_multiplier'
+								defaultValue = {this.state.height_multiplier}
+								placeholder='Height Multiplier'
+								label='Height Multiplier'
+
+								onChange = {this.change_height_multiplier}/>
 						</div>
-						<label htmlFor="height_multiplier"> Spreadsheet URL </label>
-						<input className="form-control"
-							type='text'
-							ref = 'spreadsheet_url'
-						   	id='spreadsheet_url'
-							defaultValue = {this.state.spreadsheet_url}
-							placeholder='SpreadSheet Url'
-							label='SpreadSheet Url'
-						/>
-						<Button onClick ={this.update_spreadsheet} style ={{'marginTop':'10px'}}> Load </Button>
-					</div>
-				</div>
-			</div> 
-			<Chart data = {this.state.data}  options= {this.state.options}  loaded = {this.state.spreadsheet_loaded} />
 
+						<div>
+							<div style ={{'marginTop':'10px'}}> 
+								<a href={this.state.spreadsheet_url} target="_blank"> 
+									Edit Spreadsheet Values 
+								</a> 
+							</div>
+
+							<Input className="form-control"
+								type='text'
+								ref = 'spreadsheet_url'
+							   	id='spreadsheet_url'
+								defaultValue = {this.state.spreadsheet_url}
+								placeholder='SpreadSheet Url'
+								label='SpreadSheet Url'
+								bsSize="small"
+							/>
+							<Button onClick ={this.update_spreadsheet} style ={{'marginTop':'10px'}}> Load </Button>
+						</div>
+					</div>
+				</div> 
+
+				<Chart data = {this.state.data}  options= {this.state.options}  loaded = {this.state.spreadsheet_loaded} />
+
+			</div>
+			
+			<div className={"row controls"}>
+				<Button  onClick ={this.start_animation} > Start  </Button>
+				<Button  onClick ={this.stop_animation} > Stop  </Button>
+				<Button  onClick ={this.reset_animation} > Reset  </Button>
+			</div>
 		</div>
 			);
 	}

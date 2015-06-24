@@ -26,7 +26,8 @@ SpreadSheet.prototype.fetch = function(){
       } catch(e) {
         deferred.reject("Spreadsheet doesn't contain Data sheet : ", e);
       }
-
+      
+      // it's ok if it's not defined don't throw an exception
       if (typeof sheets['Options'] !== 'undefined') {
         self.options_sheet = new Sheet(sheets['Options']);
       }
