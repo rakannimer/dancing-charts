@@ -43,6 +43,8 @@ To build, watch and serve the examples (which will also watch the component sour
 ## Credits
 
 [tabletop](https://github.com/jsoma/tabletop) to grab the Chart data from Google Spreadsheets.
+
 [Bouncing css Loader](http://codepen.io/dicson/pen/vOxZjM)
+
 [React Component Generator](https://github.com/JedWatson/generator-react-component)
 
