@@ -134,8 +134,8 @@ var DancingSpreadsheets= React.createClass({
 		var data =this.state.data;
 		window.clearInterval(this.interval_id);
 		this.current_row = 1;
-		data[1] = self.spreadsheet.data_sheet.rows[this.current_row];
-		self.setState({
+		data[1] = this.spreadsheet.data_sheet.rows[this.current_row];
+		this.setState({
 			data: data
 		});
 		//this.start_animation();
