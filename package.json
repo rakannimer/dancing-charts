@@ -14,7 +14,6 @@
   },
   "dependencies": {
     "classnames": "^2.1.2",
-    "jquery": "^2.1.4",
     "q": "^1.4.1",
     "react": "^0.13.3",
     "react-bootstrap": "^0.23.4",
